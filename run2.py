@@ -109,7 +109,7 @@ def players_stats(player_name):
 def general_stats():
   print('1 - By Year')
   print('2 - All Time')
-  time_span = google.colab.input('Please choose one of the following: ').strip().title()
+  time_span = input('Please choose one of the following: ').strip().title()
   if time_span == '2':
       while True:
         print("Please choose your main metric:")
@@ -145,7 +145,7 @@ def general_stats():
           print("I am sorry, I did not get that. Let's try again.")
           continue
   elif time_span == '1':
-    year = google.colab.input('Please choose a year from 1985 to 2017: ').strip().title()
+    year = input('Please choose a year from 1985 to 2017: ').strip().title()
     while True:
       if int(year) >= 1985 and int(year) <= 2017:
         while True:
@@ -153,7 +153,7 @@ def general_stats():
           print("1 - Points")
           print("2 - Rebounds")
           print("3 - Assists")
-          measure = google.colab.input('Please type your choice: ').strip().title()
+          measure = input('Please type your choice: ').strip().title()
           if measure == '1':
             grouped_data = nba_data[nba_data['year'] == int(year)].groupby(['player_name', 'year']).agg({'pts': 'sum', 'g': 'sum'}).reset_index()
             grouped_data = grouped_data.rename(columns={'player_name': 'Player Name', 'pts': 'Total Points', 'g': 'Games Played'})
@@ -182,7 +182,7 @@ def general_stats():
             print("I am sorry, I did not get that. Let's try again.")
             continue
       else:
-        year = google.colab.input('Invalid Year. \nPlease choose a year from 1985 to 2017: ').strip().title()
+        year = input('Invalid Year. \nPlease choose a year from 1985 to 2017: ').strip().title()
         continue
 
 
@@ -242,7 +242,7 @@ def play_game():
     used_clues = [random_number]
 
     while attempts_left > 0:
-        guess = google.colab.input("\nEnter your guess: ").strip().title()
+        guess = input("\nEnter your guess: ").strip().title()
 
         if guess.lower() == 'quit':
             print("Thanks for playing!")
@@ -309,7 +309,7 @@ def choose_first():
     print('2 - Show stats')
     #game = input("\nChoose one option: ").strip().title()
     print("Choose one option:\n")
-    game = google.colab.input()
+    game = input()
 
     if game == '2':
       print(general_stats())
@@ -332,7 +332,7 @@ def choose_next():
     print('2 - Show stats')
     print('3 - Quit')
     print("Choose one option:\n")
-    game = google.colab.input()
+    game = input()
     if game == '2':
       print(general_stats())
       choose_next()
