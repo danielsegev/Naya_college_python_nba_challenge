@@ -1,4 +1,6 @@
-text = input()
+import google.colab
+
+text = google.colab.input()
 if text == 'yes':
     print("yes")
 else:
