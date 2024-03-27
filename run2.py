@@ -297,6 +297,10 @@ def play_game():
 
 # Start game
 def choose_first():
+  
+  # Import data
+  import_data()
+  
   while True:
     print("Welcome to the NBA trivia/stats generator!")
     print("Please choose one of the following:")
