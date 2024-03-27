@@ -34,10 +34,10 @@ def play_game():
     url = player_data['image'].min()
 
     # Open the URL and download the image data (work only on Google Colab env)
-    #image_data = urllib.request.urlopen(url).read()
+    image_data = urllib.request.urlopen(url).read()
 
     # Create an Image object from the downloaded data (work only on Google Colab env)
-    # image = Image.open(io.BytesIO(image_data))
+    image = Image.open(io.BytesIO(image_data))
 
     # Display the clues to the player
     random_number = random.randint(1, number_of_questions)
@@ -60,9 +60,9 @@ def play_game():
         if guess == player:
             print("Congratulations! You guessed correctly.")
             # Display the image in the notebook
-            #resize_percentage = 50  # 50% of the original size
-            #image.thumbnail((image.width * resize_percentage // 100, image.height * resize_percentage // 100))
-            #display(image)
+            resize_percentage = 50  # 50% of the original size
+            image.thumbnail((image.width * resize_percentage // 100, image.height * resize_percentage // 100))
+            display(image)
 
             # Return to main function
             time.sleep(2)
@@ -96,9 +96,9 @@ def play_game():
     print(f"\nYou've used all your attempts. The correct answer is: {player}")
 
     # Display the image in the notebook (work only on Google Colab env)
-    #resize_percentage = 50  # 50% of the original size
-    #image.thumbnail((image.width * resize_percentage // 100, image.height * resize_percentage // 100))
-    #display(image)
+    resize_percentage = 50  # 50% of the original size
+    image.thumbnail((image.width * resize_percentage // 100, image.height * resize_percentage // 100))
+    display(image)
 
     # Return to main function
     time.sleep(2)
