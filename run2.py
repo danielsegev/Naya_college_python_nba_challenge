@@ -8,7 +8,6 @@ import os
 import sys
 import time
 import requests
-import google.colab
 
 # Generate Google Drive Link
 def csv_drive_path_generator(url):
@@ -116,7 +115,7 @@ def general_stats():
         print("1 - Points")
         print("2 - Rebounds")
         print("3 - Assists")
-        measure = google.colab.('Please type your choice: ').strip().title()
+        measure = input('Please type your choice: ').strip().title()
         if measure == '1':
           grouped_data = nba_data.groupby(['player_name']).agg({'pts': 'sum', 'g': 'sum'}).reset_index()
           grouped_data = grouped_data.rename(columns={'player_name': 'Player Name', 'pts': 'Total Points', 'g': 'Games Played'})
