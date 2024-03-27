@@ -106,6 +106,7 @@ def players_stats(player_name):
 
 # Show statistics
 def general_stats():
+  nba_data = import_data()
   print('1 - By Year')
   print('2 - All Time')
   time_span = input('Please choose one of the following: ').strip().title()
@@ -211,7 +212,7 @@ def play_game():
     print("Good luck!")
 
     # Load data
-    import_data()
+    nba_data = import_data()
     
     # Number of clues in the bank
     number_of_questions = 8
@@ -297,10 +298,6 @@ def play_game():
 
 # Start game
 def choose_first():
-  
-  # Import data
-  import_data()
-  
   while True:
     print("Welcome to the NBA trivia/stats generator!")
     print("Please choose one of the following:")
