@@ -306,7 +306,9 @@ def choose_first():
     print("Please choose one of the following:")
     print('1 - Play trivia')
     print('2 - Show stats')
-    game = input("\nChoose one option: ").strip().title()
+    #game = input("\nChoose one option: ").strip().title()
+    print("Choose one option:\n")
+    game = input()
 
     if game == '2':
       print(general_stats())
