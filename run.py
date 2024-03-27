@@ -15,7 +15,6 @@ import play_trivia
 import main_game
 
 
-csv_drive_path_generator()
 import_data()
 select_random_player()
 clue_1()
