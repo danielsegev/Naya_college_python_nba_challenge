@@ -209,9 +209,6 @@ def play_game():
     print("Type 'stats' to display the player's career statistics.")
     print("Type 'quit' at any time to exit the game.")
     print("Good luck!")
-
-    # Load data
-    import_data()
     
     # Number of clues in the bank
     number_of_questions = 8
@@ -297,6 +294,11 @@ def play_game():
 
 # Start game
 def choose_first():
+    
+  # Import data
+  import_data()
+  
+  # Start game
   while True:
     print("Welcome to the NBA trivia/stats generator!")
     print("Please choose one of the following:")
