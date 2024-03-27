@@ -5,8 +5,8 @@ Welcome to the NBA Trivia Challenge! This project allows you to test your knowle
 ## Overview
 
 The NBA Challenge is a Python-based game that has two main functionalities:
-1. NBA Trivia - This game presents random NBA player facts and challenges players to guess the correct player based on the clues provided. Players have multiple attempts to guess the right answer and can request additional clues if necessary.
-2. NBA Stats Explorer - This tool allows you to explore NBA statistics by year or all-time. Simply select an option, choose a key metric (points, rebounds, assists), and the statistics will be displayed.
+1. **NBA Trivia** - This game presents random NBA player facts and challenges players to guess the correct player based on the clues provided. Players have multiple attempts to guess the right answer and can request additional clues if necessary.
+2. **NBA Stats Explorer** - This tool allows you to explore NBA statistics by year or all-time. Simply select an option, choose a key metric (points, rebounds, assists), and the statistics will be displayed.
 
 ## Features
 
